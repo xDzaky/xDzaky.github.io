@@ -3,6 +3,7 @@
 html {
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -22,6 +23,8 @@ nav {
     margin-top: 20px;
     z-index: 999;
     animation: slideDown 1s ease-out forwards;
+    position: relative;
+    text-decoration: none;  
 }
 
 .logo {
@@ -62,6 +65,22 @@ span {
     opacity: 0;
 }
 
+.wrapper h1 {
+    opacity: 0;
+    animation: fadeInText 3s forwards;
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .wrapper h2 {
     color: red;
     margin-top: 10px;
@@ -90,6 +109,12 @@ span {
     animation: scaleUp 2s ease-out forwards;
 }
 
+.container img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 70px 10px rgba(255, 0, 0, 0.7);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
 /* Button */
 .btn {
     margin-top: 40px;
@@ -107,6 +132,8 @@ span {
 .btn:hover {
     background-color: red;
     color: #000;
+    box-shadow: 0 0 10px red, 0 0 15px red, 0 0 25px red;
+    transition: 0.5s;
 }
 
 /* Icons */
