@@ -1,44 +1,180 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Portofolio - Dzaky</title>
-</head>
-<body>
-    <nav>
-        <h1 class="logo">Dzaky <span>Web Developer</span></h1>
-        <div class="navbar">
-            <ul>
-                <li><a href="/index.html" class="home">Home</a></li>
-                <li><a href="/about/about.html">About</a></li>
-                <li><a href="/portofolio/porto.html">Portofolio</a></li>
-                <li><a href="/index.html">Contack</a></li>
-            </ul>
-        </div>
-    </nav>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
-    <div class="container">
-        <div class="wrapper">
-            <h1>Hi I'm Achmaddzaki H.A.</h1>
-            <h2>Website Developer</h2>
-            <p> Hello everyone!! my name is Dzaky, i live in Probolinggo as an ordinary resident. <br>
-            I am just a student who focuses on education and learning so that I can focus on the outside world, <br>
-            and can achieve what I want such as friends, a partner, and my own success. <br>
-            i studied at school smkn 1 Probolinggo located in Probolinggo i majorated in Rekayasa Perangkat Lunak.
-            </p>
-            <button class="btn"><strong>Contack Me</button>
-
-                <div class="icon">
-                    <a href="https://github.com/xDzaky" target="_blank"><i class='bx bxl-github'></i></a>
-                    <a href="https://www.tiktok.com/@xdzakyx_" target="_blank"><i class='bx bxl-tiktok'></i></a>
-                    <i class='bx bxl-discord-alt'></i>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <title>My - Portfolio</title>
+    </head>
+    <body id="home">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="container" style="padding: 14px 0;">
+                <a class="navbar-brand text-white" href="#"><strong>Dzaky</strong><span style="color: red;"><strong> Web Developer</strong></span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link text-white" href="#home">Home<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#project">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#contact">Contact</a>
+                        </li>
+                    </ul>
                 </div>
+            </div>
+        </nav>
+
+        <!-- Jumbotron -->
+        <section class="jumbotron">
+            <div class="pembungkus">
+                <h1 class="display-5">Hello, I'm Achmaddzaki H.A</h1>
+                <h1 class="display-6">Web Developer</h1>
+                <p class="lead" style="width: 800px;">Hello everyone!! my name is Dzaky, i live in Probolinggo as an ordinary resident. I am just a student who focuses on education and learning so that I can focus on the outside world, and can achieve what I want such as friends, a partner, and my own success. i studied at school smkn 1 Probolinggo located in Probolinggo i majorated in Rekayasa Perangkat Lunak.
+                </p>
+                <div class="icon">
+                    <i class='bx bxl-whatsapp'></i>
+                    <i class='bx bxl-github'></i>
+                    <i class='bx bxl-tiktok'></i>
+                </div>
+            </div>
+            <img src="img/profildisxord.jpg" class="profil">
+        </section>
+
+        <!-- About -->
+        <section id="about">
+            <h1 style="color: white;">About Me : </h1>
+            <div class="wrapper text-white d-flex p-2">
+                <img src="/img/profildisxord.jpg" width="400px">
+                <p class="ml-4 font-weight-bold mt-4">Hi everyone! I'm Achmaddzaki H.A., but you can call me Dzaky. I live in the vibrant city of Probolinggo, where I immerse myself in education and learning to shape my future. Currently, I'm a student at SMKN 1 Probolinggo, pursuing a major in Software Engineering. 
+                <br><br>
+                My journey in the tech world is driven by a passion for web development and a relentless desire to learn new things. Beyond coding, I’m also focused on building meaningful relationships, discovering new opportunities, and working towards my personal goals. With every step, I aim to grow, adapt, and make a positive impact, both in my personal and professional life.
+                </p>
+            </div>
+        </section>
+        <div class="skill text-white">
+            <h1 style="margin-left: 50px;">My <span style="color: red;">Skills :</span></h1>
+            <div class="atas d-flex mt-3">
+                <div class="html">
+                    <img src="/img/html.png" width="40px">
+                    <p>HTML</p>
+                </div>
+                <div class="css">
+                    <img src="/img/css.png" width="40px">
+                    <p>CSS</p>
+                </div>
+                <div class="javas">
+                    <img src="/img/javascript.png" width="40px">
+                    <p>JavaScript</p>
+                </div>
+                <div class="python">
+                    <img src="/img/python.png" width="40px">
+                    <p>Python</p>
+                </div>
+            </div>  
         </div>
-        <img src="/img/profildisxord.jpg" width="400px">
-    </div>
-</body>
+
+        <!-- Project -->
+        <section id="project" style="margin-bottom: 10rem;">
+            <div class="container" style="margin-top: 13rem;">
+                <div class="row text-center text-white mb-4">
+                    <div class="col">
+                        <h2>My Project :</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card p-3" style="width: 20rem;">
+                            <img src="/img/Screenshot (237).png" class="card-img-top" alt="...">
+                            <div class="mt-3">
+                                <h4>My Link Tree</h4>
+                                <p class="card-text">I developed a Bio Link that serves as a central access point for my social media accounts, including YouTube, TikTok, and GitHub. The project is designed with a modern approach, utilizing HTML, CSS, and JavaScript to create an intuitive and responsive interface.</p>
+                                <h5 class="text-center" style="color: red; font-size: 18px;">HTML, CSS, JS</h5>
+                                <a href="https://xdzaky.github.io/linktree-dzaky/" class="visit-icon" target="_blank">
+                                    <i class="fas fa-globe"></i> Visit My Linktree
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card p-3" style="width: 20rem;">
+                            <img src="/img/Screenshot (237).png" class="card-img-top" alt="...">
+                            <div class="mt-3">
+                                <h4>My Link Tree</h4>
+                                <p class="card-text">I developed a Bio Link that serves as a central access point for my social media accounts, including YouTube, TikTok, and GitHub. The project is designed with a modern approach, utilizing HTML, CSS, and JavaScript to create an intuitive and responsive interface.</p>
+                                <h5 class="text-center" style="color: red; font-size: 18px;">HTML, CSS, JS</h5>
+                                <a href="https://xdzaky.github.io/linktree-dzaky/" class="visit-icon" target="_blank">
+                                    <i class="fas fa-globe"></i> Visit My Linktree
+                                </a>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card p-3" style="width: 20rem;">
+                            <img src="/img/Screenshot (237).png" class="card-img-top" alt="...">
+                            <div class="mt-3">
+                                <h4>My Link Tree</h4>
+                                <p class="card-text">I developed a Bio Link that serves as a central access point for my social media accounts, including YouTube, TikTok, and GitHub. The project is designed with a modern approach, utilizing HTML, CSS, and JavaScript to create an intuitive and responsive interface.</p>
+                                <h5 class="text-center" style="color: red; font-size: 18px;">HTML, CSS, JS</h5>
+                                <a href="https://xdzaky.github.io/" class="visit-icon" target="_blank">
+                                    <i class="fas fa-globe"></i> Visit My Linktree
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <div class="container">
+                <div class="row text-center text-white mb-4">
+                    <div class="col">
+                        <h2>Contact Me :</h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center" style="width: 900px; margin: auto;">  
+                    <div class="col text-white">
+                        <div class="card p-3" style="background-color: transparent; border-color: white;">
+                            <form>
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Your Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email address</label>
+                                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Your Email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea class="form-control" id="message" rows="3" placeholder="Your Message"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9b1/7Wqk9FRbYle5KILR4o18yB2M1zlj7Aed" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
 </html>
