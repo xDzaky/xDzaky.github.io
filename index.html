@@ -103,7 +103,7 @@
                                 <h4>My Link Tree</h4>
                                 <p class="card-text">I developed a Bio Link that serves as a central access point for my social media accounts, including YouTube, TikTok, and GitHub. The project is designed with a modern approach, utilizing HTML, CSS, and JavaScript to create an intuitive and responsive interface.</p>
                                 <h5 class="text-center" style="color: red; font-size: 18px;">HTML, CSS, JS</h5>
-                                <a href="https://linktree-dzaky.vercel.app/" class="visit-icon" target="_blank">
+                                <a href="https://xdzaky.github.io/linktree-dzaky/" class="visit-icon" target="_blank">
                                     <i class="fas fa-globe"></i> Visit My Linktree
                                 </a>
                             </div>
@@ -116,7 +116,7 @@
                                 <h4>My Link Tree</h4>
                                 <p class="card-text">I developed a Bio Link that serves as a central access point for my social media accounts, including YouTube, TikTok, and GitHub. The project is designed with a modern approach, utilizing HTML, CSS, and JavaScript to create an intuitive and responsive interface.</p>
                                 <h5 class="text-center" style="color: red; font-size: 18px;">HTML, CSS, JS</h5>
-                                <a href="https://linktree-dzaky.vercel.app/" class="visit-icon" target="_blank">
+                                <a href="https://xdzaky.github.io/linktree-dzaky/" class="visit-icon" target="_blank">
                                     <i class="fas fa-globe"></i> Visit My Linktree
                                 </a>
                             </div>
@@ -129,7 +129,7 @@
                                 <h4>My Link Tree</h4>
                                 <p class="card-text">I developed a Bio Link that serves as a central access point for my social media accounts, including YouTube, TikTok, and GitHub. The project is designed with a modern approach, utilizing HTML, CSS, and JavaScript to create an intuitive and responsive interface.</p>
                                 <h5 class="text-center" style="color: red; font-size: 18px;">HTML, CSS, JS</h5>
-                                <a href="https://linktree-dzaky.vercel.app/" class="visit-icon" target="_blank">
+                                <a href="https://xdzaky.github.io/" class="visit-icon" target="_blank">
                                     <i class="fas fa-globe"></i> Visit My Linktree
                                 </a>
                             </div>
@@ -149,21 +149,30 @@
                 </div>
                 <div class="row justify-content-center" style="width: 900px; margin: auto;">  
                     <div class="col text-white">
+                        <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">  
+                            <strong>Success! </strong>Pesan anda telah terkirim.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
                         <div class="card p-3" style="background-color: transparent; border-color: white;">
-                            <form>
+                            <form name="submit-to-google-sheet">
                                 <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Your Name">
+                                    <label for="name">Nama</label>
+                                    <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Your Name" name="nama">
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email address</label>
-                                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Your Email">
+                                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Your Email" name="email">
                                 </div>
                                 <div class="form-group">
                                     <label for="message">Message</label>
-                                    <textarea class="form-control" id="message" rows="3" placeholder="Your Message"></textarea>
+                                    <textarea class="form-control" id="message" rows="3" placeholder="Your Message" name="pesan"></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Send</button>
+                                <button type="submit" class="btn btn-primary btn-kirim">Kirim</button>
+
+                                <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                                    <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                                    <span role="status">Loading...</span>
+                                </button>
                             </form>
                         </div>
                     </div>
@@ -176,5 +185,28 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9b1/7Wqk9FRbYle5KILR4o18yB2M1zlj7Aed" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!-- Contact Js -->
+        <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzCuPqUrNPQO1ovgHDS-v_WCGcj9GA-PolydHUKfvLD1vwgOS7BscH1uJ2oEnaVddQs/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const btnKirim = document.querySelector('.btn-kirim')
+        const btnLoading = document.querySelector('.btn-loading')
+        const myAlert = document.querySelector('.my-alert')
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            btnKirim.classList.toggle('d-none')
+            btnLoading.classList.toggle('d-none')
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                btnKirim.classList.toggle('d-none');
+                btnLoading.classList.toggle('d-none');
+                myAlert.classList.toggle('d-none');
+                console.log('Success!', response);
+                form.reset();
+            })  
+            .catch(error => console.error('Error!', error.message))
+        })
+        </script>
     </body>
 </html>
